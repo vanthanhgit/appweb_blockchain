@@ -24,7 +24,7 @@ setInfLog({...infLog,
             type="text"
             id="email"
             className="input-f"
-            placeholder="Email"
+            placeholder="Name"
             name="email"
             onChange={getInf}
           />
@@ -34,7 +34,7 @@ setInfLog({...infLog,
             type="password"
             id="password"
             className="input-f"
-            placeholder="Password"
+            placeholder="Public key"
             name="password"
             onChange={getInf}
           />
