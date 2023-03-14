@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html::-webkit-scrollbar{
+  width:5px;
+}
+
+html::-webkit-scrollbar-track{
+  background: black;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: white;
+}
+
+:root{
+  width: 100%;
+  cursor: pointer;
+  font-size: 60.2%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
