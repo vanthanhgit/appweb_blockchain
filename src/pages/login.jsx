@@ -1,11 +1,19 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Nav from ".././components/nav";
 import FormLogRegister from "../components/formLogRegister";
+import AlertLog from '../components/alertLog'
+
 import ".././assets/custom/scss/login.scss";
 
 function login() {
+// check log start
+
+  const [messLog, setMessLog] = useState('fail')
+// check log end
+
   return (
     <div className="layout-login">
       <Nav />
@@ -23,6 +31,9 @@ function login() {
         </div>
         <FormLogRegister />
       </div>
+
+      {/* alert log */}
+      <AlertLog messLog={messLog}/>
     </div>
   );
 }

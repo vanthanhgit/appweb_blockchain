@@ -1,21 +1,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const formLog = () => {
-  const [infLog, setInfLog] = useState({
-    email:'',
-    password:'',
-})
+  const [infLog, setInfLog] = useState();
 
-const getPustInfLog = () => {
-  console.log(infLog);
-};
-
-function getInf(e){
-setInfLog({...infLog,
-    [e.target.name]: e.target.value
-})
-}
+  const getPustInfLog = () => {
+    console.log(infLog);
+  };
+ 
+  function getInf(e) {
+    setInfLog({ ...infLog, [e.target.name]: e.target.value });
+  }
   return (
     <>
       <form className="form-register-log">
@@ -25,7 +20,7 @@ setInfLog({...infLog,
             id="email"
             className="input-f"
             placeholder="Name"
-            name="email"
+            name="name"
             onChange={getInf}
           />
         </label>
@@ -35,12 +30,14 @@ setInfLog({...infLog,
             id="password"
             className="input-f"
             placeholder="Public key"
-            name="password"
+            name="publickey"
             onChange={getInf}
           />
         </label>
       </form>
-      <button id="butt-register-log" onClick={getPustInfLog}>Log</button>
+      <button id="butt-register-log" onClick={getPustInfLog}>
+        Log
+      </button>
     </>
   );
 };
